@@ -58,7 +58,7 @@ export const Navbar = () => {
           </span>
         </a>
 
-        {/* Desktop Nav & Theme Toggle Wrapper */}
+        {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <a
@@ -72,10 +72,8 @@ export const Navbar = () => {
               {item.name}
             </a>
           ))}
-          {/* The ThemeToggle is now a direct child for proper alignment */}
           <ThemeToggle />
         </div>
-
 
         {/* Mobile Nav Toggle */}
         <button
@@ -96,7 +94,7 @@ export const Navbar = () => {
               : "opacity-0 pointer-events-none"
           )}
         >
-          <div className="flex flex-col space-y-8 text-xl">
+          <div className="flex flex-col space-y-8 text-center text-xl">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -110,6 +108,10 @@ export const Navbar = () => {
                 {item.name}
               </a>
             ))}
+            {/* UPDATED: Added ThemeToggle to the mobile menu */}
+            <div className="pt-4">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </div>
