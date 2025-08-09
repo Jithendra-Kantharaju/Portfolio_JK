@@ -12,7 +12,7 @@ const projects = [
     // UPDATED: Added repoName to the image path
     image: `${repoName}/projects/Movie_Streaming.png`,
     tags: ["Docker", "Kubernetes", "Jenkins", "AWS EKS", "Node.js"],
-    githubUrl: "#",
+    githubUrl: "https://github.com/Jithendra-Kantharaju/Movie-Streaming-App-DevOps.git",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const projects = [
     // UPDATED: Added repoName to the image path
     image: `${repoName}/projects/voice_clone.png`,
     tags: ["Python", "Scikit-learn", "SVM", "MFCC", "Voice Cloning"],
-    githubUrl: "#",
+    githubUrl: "https://github.com/Jithendra-Kantharaju/Detecting-Voice-Clones-in-Voice-Assistants.git",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const projects = [
     // UPDATED: Added repoName to the image path
     image: `${repoName}/projects/CICD_React.png`,
     tags: ["AWS CodePipeline", "AWS CodeBuild", "S3", "React.js"],
-    githubUrl: "#",
+    githubUrl: "https://github.com/Jithendra-Kantharaju/AWS-codepipeline-react-s3.git",
   },
 ];
 
