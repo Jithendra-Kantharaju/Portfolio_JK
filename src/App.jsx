@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom"; // UPDATED
 import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
 import { Toaster } from "@/components/ui/toaster";
@@ -17,14 +17,15 @@ function App() {
     <>
       {/* Toaster component for displaying notifications */}
       <Toaster />
-      <BrowserRouter>
+      {/* UPDATED: Changed BrowserRouter to HashRouter for GitHub Pages compatibility */}
+      <HashRouter>
         <Routes>
           {/* Main route for the Home page */}
           <Route index element={<Home />} />
           {/* Catch-all route for displaying a 404 Not Found page */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
