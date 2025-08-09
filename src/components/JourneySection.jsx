@@ -42,7 +42,7 @@ export const JourneySection = () => {
           {/* Left Column: Education */}
           {/* UPDATED: Removed vertical centering to align headings */}
           <div>
-            <h3 className="text-2xl font-semibold flex items-center gap-3 mb-10">
+            <h3 className="text-2xl font-medium flex items-center gap-3 mb-10">
               <GraduationCap className="h-7 w-7 text-primary" />
               Education
             </h3>
