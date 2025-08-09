@@ -85,9 +85,10 @@ export const Navbar = () => {
         </button>
 
         {/* Mobile Menu Overlay */}
+        {/* UPDATED: Added overflow-y-auto to make the menu scrollable */}
         <div
           className={cn(
-            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
+            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center overflow-y-auto py-20",
             "transition-all duration-300 md:hidden",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
@@ -108,7 +109,6 @@ export const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            {/* UPDATED: Wrapped ThemeToggle in a flex container to ensure it's centered */}
             <div className="pt-4 flex justify-center">
               <ThemeToggle />
             </div>
