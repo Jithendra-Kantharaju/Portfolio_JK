@@ -22,7 +22,7 @@ export const HeroSection = () => {
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
             I create resilient and scalable cloud-native solutions with modern technologies. 
-            Specializing in DevOps and cloud infrastructure, 
+            Specializing in DevOps and Cloud infrastructure, 
             I build automated systems that are both efficient and robust.
           </p>
 
