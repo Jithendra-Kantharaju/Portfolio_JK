@@ -1,8 +1,10 @@
-import { GitMerge, Cloud, Code, ClipboardList } from "lucide-react";
+import { Briefcase, Code, User } from "lucide-react";
+
+// The name of your repository on GitHub
+const repoName = "/Portfolio_JK";
 
 export const AboutSection = () => {
   return (
-    // UPDATED: Added classes to make the section fill the screen height
     <section id="about" className="relative flex min-h-screen items-center px-2 py-16">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -29,8 +31,9 @@ export const AboutSection = () => {
               <a href="#contact" className="cosmic-button">
                 Get In Touch
               </a>
+              {/* UPDATED: Added repoName to the href path */}
               <a
-                href="/My_Resume.pdf"
+                href={`${repoName}/My_Resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
@@ -40,18 +43,17 @@ export const AboutSection = () => {
             </div>
           </div>
 
-          {/* Right Side Content (with equal height boxes) */}
+          {/* Right Side Content */}
           <div className="grid grid-cols-1 gap-4">
             <div className="gradient-border p-4 card-hover flex h-full">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  {/* Icon Updated */}
-                  <GitMerge className="h-6 w-6 text-primary" />
+                  <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg"> DevOps & Automation</h4>
                   <p className="text-muted-foreground text-sm">
-                    Creating robust CI/CD pipelines and automating infrastructure provisioning to accelerate development cycles.
+                    Implementing CI/CD pipelines with Jenkins, Maven, and SonarQube, and automating infrastructure with Ansible and Terraform.
                   </p>
                 </div>
               </div>
@@ -59,13 +61,12 @@ export const AboutSection = () => {
             <div className="gradient-border p-4 card-hover flex h-full">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  {/* Icon Updated */}
-                  <Cloud className="h-6 w-6 text-primary" />
+                  <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Cloud Engineer</h4>
                   <p className="text-muted-foreground text-sm">
-                    Building and managing scalable cloud infrastructure on AWS to ensure high availability and performance.
+                    Building and deploying scalable cloud infrastructure on AWS, utilizing services like EC2, S3, RDS, and Kubernetes (EKS).
                   </p>
                 </div>
               </div>
@@ -73,13 +74,12 @@ export const AboutSection = () => {
             <div className="gradient-border p-4 card-hover flex h-full">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  {/* Icon Updated */}
-                  <Code className="h-6 w-6 text-primary" />
+                  <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Software Engineer</h4>
                   <p className="text-muted-foreground text-sm">
-                    Designing and implementing robust software solutions to meet user requirements and business goals.
+                    Designing full-stack applications like a movie streaming platform and an Order Management System using Node.js, MySQL, and React.
                   </p>
                 </div>
               </div>
@@ -87,13 +87,12 @@ export const AboutSection = () => {
             <div className="gradient-border p-4 card-hover flex h-full">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  {/* Icon Updated */}
-                  <ClipboardList className="h-6 w-6 text-primary" />
+                  <Briefcase className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Project Management</h4>
                   <p className="text-muted-foreground text-sm">
-                    Leading projects from conception to completion with agile methodologies.
+                    Utilizing tools like Jira and Git for version control and issue tracking, with experience in Agile methodologies.
                   </p>
                 </div>
               </div>
