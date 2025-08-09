@@ -1,37 +1,36 @@
 import { useState } from "react";
 import { ArrowRight, Github, X } from "lucide-react";
 
-// UPDATED: Project data now reflects your resume
+// The name of your repository on GitHub
+const repoName = "/Portfolio_JK";
+
 const projects = [
   {
     id: 1,
     title: "Movie Streaming Application",
     description: "Designed and deployed a scalable full-stack movie streaming platform using a containerized microservices architecture on AWS EKS with automated CI/CD pipelines.",
-    image: "/projects/Movie_Streaming.png",
+    // UPDATED: Added repoName to the image path
+    image: `${repoName}/projects/Movie_Streaming.png`,
     tags: ["Docker", "Kubernetes", "Jenkins", "AWS EKS", "Node.js"],
-    githubUrl: "#", // Add the direct link to the project's GitHub repo
+    githubUrl: "#",
   },
   {
     id: 2,
-  title: "Detecting Voice Clones in Voice Assistants",
-  description: "Developed a machine learning solution to detect AI-cloned voices targeting Apple Siri’s authentication, achieving 96% accuracy with MFCC features and an SVM classifier.",
-  image: "/projects/voice_clone.png",
-  tags: [
-    "Python",
-    "Scikit-learn",
-    "SVM",
-    "MFCC",
-    "Voice Cloning"
-  ],
-  githubUrl: "#", // Add your repo link here if available
+    title: "Detecting Voice Clones in Voice Assistants",
+    description: "Developed a machine learning solution to detect AI-cloned voices targeting Apple Siri’s authentication, achieving 96% accuracy with MFCC features and an SVM classifier.",
+    // UPDATED: Added repoName to the image path
+    image: `${repoName}/projects/voice_clone.png`,
+    tags: ["Python", "Scikit-learn", "SVM", "MFCC", "Voice Cloning"],
+    githubUrl: "#",
   },
   {
     id: 3,
     title: "CI/CD Pipeline for React App",
     description: "Architected a complete CI/CD pipeline on AWS to automate the build and deployment of a React.js application from GitHub to an S3 bucket for hosting.",
-    image: "/projects/CICD_React.png", // Replace with an actual screenshot
+    // UPDATED: Added repoName to the image path
+    image: `${repoName}/projects/CICD_React.png`,
     tags: ["AWS CodePipeline", "AWS CodeBuild", "S3", "React.js"],
-    githubUrl: "#", // Add the direct link to the project's GitHub repo
+    githubUrl: "#",
   },
 ];
 
@@ -129,7 +128,6 @@ export const ProjectsSection = () => {
               alt="Enlarged project view"
               className="max-w-4xl max-h-[80vh] object-contain rounded-lg shadow-2xl"
             />
-            {/* UPDATED: Changed colors to a blue background with a white icon */}
             <button
               onClick={closeModal}
               className="absolute -top-4 -right-4 text-white bg-primary rounded-full p-2 hover:bg-primary/80 transition-colors transform hover:scale-110"
