@@ -1,46 +1,37 @@
 import { useState } from "react";
 import { ArrowRight, Github, X } from "lucide-react";
 
+// UPDATED: Project data now reflects your resume
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["A", "B", "C"],
-    githubUrl: "https://github.com/Jithendra-Kantharaju/Portfolio_JK",
+    title: "Movie Streaming Application",
+    description: "Designed and deployed a scalable full-stack movie streaming platform using a containerized microservices architecture on AWS EKS with automated CI/CD pipelines.",
+    image: "/projects/Movie_Streaming.png",
+    tags: ["Docker", "Kubernetes", "Jenkins", "AWS EKS", "Node.js"],
+    githubUrl: "#", // Add the direct link to the project's GitHub repo
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
-    description: "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    githubUrl: "#",
+  title: "Detecting Voice Clones in Voice Assistants",
+  description: "Developed a machine learning solution to detect AI-cloned voices targeting Apple Siri’s authentication, achieving 96% accuracy with MFCC features and an SVM classifier.",
+  image: "/projects/voice_clone.png",
+  tags: [
+    "Python",
+    "Scikit-learn",
+    "SVM",
+    "MFCC",
+    "Voice Cloning"
+  ],
+  githubUrl: "#", // Add your repo link here if available
   },
   {
     id: 3,
-    title: "E-commerce Platform",
-    description: "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    githubUrl: "#",
-  },
-  {
-    id: 4,
-    title: "QWE",
-    description: "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    githubUrl: "#",
-  },
-  {
-    id: 5,
-    title: "ASD",
-    description: "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    githubUrl: "#",
+    title: "CI/CD Pipeline for React App",
+    description: "Architected a complete CI/CD pipeline on AWS to automate the build and deployment of a React.js application from GitHub to an S3 bucket for hosting.",
+    image: "/projects/CICD_React.png", // Replace with an actual screenshot
+    tags: ["AWS CodePipeline", "AWS CodeBuild", "S3", "React.js"],
+    githubUrl: "#", // Add the direct link to the project's GitHub repo
   },
 ];
 
@@ -70,7 +61,7 @@ export const ProjectsSection = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col"
             >
               <div
                 className="h-48 overflow-hidden cursor-pointer"
@@ -83,7 +74,7 @@ export const ProjectsSection = () => {
                 />
               </div>
 
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-grow">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, index) => (
                     <span key={index} className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
@@ -93,20 +84,18 @@ export const ProjectsSection = () => {
                 </div>
 
                 <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-4 flex-grow">
                   {project.description}
                 </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
-                  </div>
+                <div className="flex justify-end items-center mt-auto">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                  >
+                    <Github size={20} />
+                  </a>
                 </div>
               </div>
             </div>
@@ -125,28 +114,29 @@ export const ProjectsSection = () => {
         </div>
       </div>
 
-      {/* Modal with transparent background */}
+      {/* Modal for viewing enlarged images */}
       {selectedImage && (
         <div
-          className="fixed inset-0 flex justify-center items-center z-50 p-4"
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm flex justify-center items-center z-50 p-4"
           onClick={closeModal}
         >
           <div
             className="relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              onClick={closeModal}
-              className="absolute -top-4 -right-4 md:top-2 md:right-2 text-white bg-black/50 rounded-full p-1 hover:bg-black/80 transition-colors"
-              aria-label="Close image viewer"
-            >
-              <X size={28} />
-            </button>
             <img
               src={selectedImage}
               alt="Enlarged project view"
               className="max-w-4xl max-h-[80vh] object-contain rounded-lg shadow-2xl"
             />
+            {/* UPDATED: Changed colors to a blue background with a white icon */}
+            <button
+              onClick={closeModal}
+              className="absolute -top-4 -right-4 text-white bg-primary rounded-full p-2 hover:bg-primary/80 transition-colors transform hover:scale-110"
+              aria-label="Close image viewer"
+            >
+              <X size={24} />
+            </button>
           </div>
         </div>
       )}

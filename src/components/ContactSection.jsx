@@ -129,12 +129,16 @@ export const ContactSection = () => {
             </div>
 
             <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
-              <div className="flex space-x-4 justify-center">
-                <a href="https://www.linkedin.com/in/jithendra-kantharaju/" target="_blank" rel="noopener noreferrer">
+              <h4 className="font-medium mb-4 text-center"> Connect With Me</h4>
+              {/* UPDATED: Added Mail icon and link */}
+              <div className="flex space-x-6 justify-center">
+                <a href="https://www.linkedin.com/in/jithendra-kantharaju/" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-primary transition-colors">
                   <Linkedin />
                 </a>
-                <a href="https://www.instagram.com/_jithendra_gowda?igsh=MTlnZDgyZGg4eTl1ZQ==" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:jithendra.kantharaju@gmail.com" className="text-foreground/80 hover:text-primary transition-colors">
+                  <Mail />
+                </a>
+                <a href="https://www.instagram.com/_jithendra_gowda?igsh=MTlnZDgyZGg4eTl1ZQ==" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-primary transition-colors">
                   <Instagram />
                 </a>
               </div>
@@ -145,7 +149,6 @@ export const ContactSection = () => {
           <div className="bg-card p-8 rounded-lg shadow-xs">
             <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
             
-            {/* The onSubmit handler should be on the form element */}
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label

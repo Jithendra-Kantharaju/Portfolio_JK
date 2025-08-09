@@ -1,4 +1,4 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { GitMerge, Cloud, Code, ClipboardList } from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -45,7 +45,8 @@ export const AboutSection = () => {
             <div className="gradient-border p-4 card-hover flex h-full">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Code className="h-6 w-6 text-primary" />
+                  {/* Icon Updated */}
+                  <GitMerge className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg"> DevOps & Automation</h4>
@@ -58,7 +59,8 @@ export const AboutSection = () => {
             <div className="gradient-border p-4 card-hover flex h-full">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
+                  {/* Icon Updated */}
+                  <Cloud className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Cloud Engineer</h4>
@@ -71,7 +73,8 @@ export const AboutSection = () => {
             <div className="gradient-border p-4 card-hover flex h-full">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
+                  {/* Icon Updated */}
+                  <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Software Engineer</h4>
@@ -84,7 +87,8 @@ export const AboutSection = () => {
             <div className="gradient-border p-4 card-hover flex h-full">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
+                  {/* Icon Updated */}
+                  <ClipboardList className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Project Management</h4>

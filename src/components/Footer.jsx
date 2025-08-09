@@ -6,7 +6,7 @@ export const Footer = () => {
       {" "}
       <p className="text-sm text-muted-foreground">
         {" "}
-        &copy; {new Date().getFullYear()} Jithendra Kantharaju. All rights reserved.
+        &copy; {new Date().getFullYear()} Made with ❤️ by Jithendra Kantharaju.
       </p>
       <a
         href="#hero"
